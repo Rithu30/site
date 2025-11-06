@@ -5,6 +5,10 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
+
+  // Add these for GitHub Pages
+  basePath: '/site',
+  assetPrefix: '/site/',
 };
 
 module.exports = nextConfig;
