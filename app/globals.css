@@ -3,13 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --border: 220 14% 96%;
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
-  --primary: 220 90% 56%;
-  --primary-foreground: 0 0% 100%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,10 +74,9 @@
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    @apply border-border;
   }
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    @apply bg-background text-foreground;
   }
 }
